@@ -70,12 +70,25 @@ html {
 body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+    color: #fff;
 }
 h1, h2, h3, h4, h5 {
     font-family: 'Oswald', sans-serif;
-    color: #fff;
 }
 h1 { font-size: 4.5em;  }
+h2 { font-size: 3.5em;  }
+h4 { 
+    font-size: 1.5em;  
+    margin: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;
+    font-family:'Oswald', sans-serif;
+    font-size: 1.25em;
+    font-weight: 300;
+}
 
 
 /*---------GRID----------------*/
@@ -86,7 +99,6 @@ h1 { font-size: 4.5em;  }
 
 /*---------JUMBOTRON----------------*/
 .jumbotron p {
-    font-size: 1.25em;
     color: #fff;
 }
 .drawings {
@@ -104,16 +116,13 @@ h1 { font-size: 4.5em;  }
 .slogan, .drawings {
     margin-top: 100px;
 }
-
-
-
 /*---------SVG DRAWING---------*/
 
 .jumbotron {
     background-image: url("../img/bg-lighter.jpg");
     background-size: 1900px 1225px;
     background-position: left top;
-    height: 800px;
+    height: 100vh;
 
 }
 .illustration {
@@ -144,10 +153,55 @@ h1 { font-size: 4.5em;  }
     transition: opacity 0.5s;
 }
 
+/*---------MAIN-NAV----------------*/
+.nav-wrapper {
+    /*background-color: rgba(255,255,255,.8);*/
+    margin-top: 50px;
+}
+.main-nav {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+}
+.main-nav li {
+    margin-left: 9%;
+}
+.cta {
+    display: inline-block;
+    border: 1px white solid;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+}
+
+/*--------FEATURES---------------*/
+.features {
+    background: 
+        linear-gradient(
+          rgba(33, 42, 52, 0.70), 
+          rgba(33, 42, 52, 0.70)
+        ),
+        url("../img/woman_beach_edit.jpg");
+    background-size: 100% auto;
+    height: 100vh;
+    padding-top: 50px;
+    position: relative;
+}
+.features-copy {
+    width: 55%;
+}
+.features p {
+    margin-bottom: 3em;
+}
 
 
-
-
+/*----------STRENGTHEN-----------*/
+.strengthen {
+    color: #222;
+}
 
 
 
