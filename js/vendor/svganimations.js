@@ -137,7 +137,7 @@
 	}
 	
 	function init() {
-		var svgs = Array.prototype.slice.call( document.querySelectorAll( '#hero svg' ) ),
+		var svgs = Array.prototype.slice.call( document.querySelectorAll( '#jumbotron svg' ) ),
 			svgArr = new Array(),
 			didScroll = false,
 			resizeTimeout;

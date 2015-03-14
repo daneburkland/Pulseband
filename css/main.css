@@ -51,38 +51,92 @@ textarea {
     padding: 0.2em 0;
 }
 
+/*---------BOX-SIZING----------*/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 
+/*---------TYPOGRAPHY----------*/
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+}
+h1 { font-size: 4.5em;  }
+
+
+/*---------GRID----------------*/
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/*---------JUMBOTRON----------------*/
+.jumbotron p {
+    font-size: 1.25em;
+    color: #fff;
+}
+.drawings {
+    width: 45%;
+    display: inline-block;
+    position: relative;
+    margin-right: 5%;
+}
+.slogan {
+    width: 50%;
+    text-align: right;
+    float: right;
+    padding-left: 3%;
+}
+.slogan, .drawings {
+    margin-top: 100px;
+}
+
+
+
 /*---------SVG DRAWING---------*/
 
-.drawings {
-    width: 100%;
-    height: 1000px;
-    background-color: #222222;
+.jumbotron {
+    background-image: url("../img/bg-lighter.jpg");
+    background-size: 1900px 1225px;
+    background-position: left top;
+    height: 800px;
+
 }
 .illustration {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
     opacity: 0;
-    width:520px;
+    width:100%;
     height: auto;
+}
+.jumbotron-device {
+    width: 100%;
 }
 .drawings svg {
     position: absolute;
     top: 0px;
     bottom: 0px;
-    width: 630px;
 }
 .show {
     opacity: 1;
 }
 .hide {
     opacity: 0;
+}
+.line-drawing {
+    width: 100%;
 }
 .line-drawing,
 .illustration {
