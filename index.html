@@ -78,8 +78,8 @@
             <section class="features">
                 <div class="container">
                     <div class="features-copy">
+                            <h2>Engage your heart, make the most of your day</h2>
                         <div class="feature-item">
-                            <h2>Engage your heart, make <br>the most of your day</h2>
                             <h4>EKG pattern recognition</h4>
                             <p>The Pulseband learns EKG patterns and distinguishes between normal elevated heart rate due to exercise and true cardiac events.</p>
                         </div>
@@ -91,6 +91,7 @@
                             <h4>Unobtrusive blood pressure readings</h4>
                             <p>Tell the Pulseband how often to check your blood pressure. A gentle haptic response will let you know when your latest reading is available</p>
                         </div>
+                    <div id="svgtest"></div>
                     </div> <!-- end features-copy -->
                 </div> <!-- end container -->
                 <span class="feature-indicator-first wp1"></span>
@@ -98,22 +99,28 @@
                 <span class="feature-indicator-third wp3"></span>
             </section> <!-- end features -->
             <section class="strengthen">
+                <div id="svgstrengthen"></div>
                 <div class="container">
-                    <h2>Monitor and strengthen your heart</h2>
-                    <div class="strengthen-item">
-                        <span class="icon"></span>
-                        <h3>Get moving</h3>
-                        <p>Track your movement throughout the day. Personalized goals and gentle haptic reminders keep you on target.</p>
-                    </div>
-                    <div class="strengthen-item">
-                        <span class="icon"></span>
-                        <h3>Stay well rested</h3>
-                        <p>Gain a better understanding of your nights. Pulseband monitors your heart and breathing activity as you sleep.</p>
-                    </div>
-                    <span class="fact wp4">People who take 10,000 steps per day greatly decrease their risk of heart disease</span>
-                    <span class="fact wp5">People who get at least 6 hours of sleep per night are about 2X less likely to be affected by heart disease</span>
+                    <h2>Monitor and strengthen <br>your heart</h2>
+                    <div class="strengthen-copy">
+                        <div class="strengthen-item">
+                            <img src="img/walk.png" height="105" width="105" alt="move">
+                            <div class="strengthen-description">
+                                <h3>Get moving</h3>
+                                <p>Track your movement throughout the day. Personalized goals and gentle haptic reminders keep you on target.</p>
+                            </div>
+                            <div class="fact wp4"><p>People who take 10,000 steps per day greatly decrease their risk of heart disease</p></div>
+                        </div>
+                        <div class="strengthen-item">
+                            <img src="img/sleep.png" height="105" width="105" alt="rest">
+                            <div class="strengthen-description">
+                                <h3>Stay well rested</h3>
+                                <p>Gain a better understanding of your nights. Pulseband monitors your heart and breathing activity as you sleep.</p>
+                            </div>
+                            <div class="fact wp5"><p>People who get at least 6 hours of sleep per night are about 2X less likely to be affected by heart disease</p></div>
+                        </div>
+                    </div> <!-- end strengthen-copy -->
                 </div> <!-- end container -->
-
             </section> <!-- end strengthen -->
             <section class="insights">
                 <div class="devices">
@@ -147,6 +154,7 @@
         <script src="js/vendor/classie.js"></script>
         <script src="js/vendor/svganimations.js"></script>
         <script src="js/vendor/jquery.onepage-scroll.min.js"></script>
+        <script src="js/vendor/jquery.lazylinepainter-1.5.1.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
