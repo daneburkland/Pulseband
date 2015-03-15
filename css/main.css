@@ -102,6 +102,7 @@ li a {
 /*---------GRID----------------*/
 .container {
     width: 70%;
+    height: 100%;
     margin: 0 auto;
 }
 
@@ -205,13 +206,29 @@ li a {
 }
 .feature-item {
     width: 65%;
+    margin: 5% 0;
 }
 #svgtest {
     position: absolute;
     top:60%;
-    right: -6%;
+    right: 6%;
     transform: translateY(-50%);
+    height: 50% !important;
 }
+.features svg {
+    position: absolute;
+    height: 100%;
+}
+#svgtest svg path:nth-child(3) {
+    stroke: #fff;
+}
+#svgtest svg path:nth-child(5) {
+    stroke: #ff0000;
+}
+#svgtest svg path:nth-child(n+7) {
+    stroke: #fff;
+}
+
 
 
 /*----------STRENGTHEN-----------*/
@@ -220,11 +237,15 @@ li a {
 }
 
 .strengthen-item {
-    margin: 95px 0;
+    margin: 10% 0;
+}
+.strengthen-item:nth-child(1) {
+    margin-top: 12%;
 }
 .fact {
     display: inline-block;
     width: 25%;
+    visibility: hidden;
 }
 .strengthen-description {
     position: relative;
@@ -244,9 +265,98 @@ li a {
 }
 #svgstrengthen {
     position: absolute;
+    right: 30%;
+    height: 100% !important;
+}
+.strengthen svg {
+    position: absolute;
+    height: 100%;
+}
+
+/*-------------INSIGHTS--------------*/
+.insights {
+    background: url("../img/background.jpg");
+    background-size: 100% auto;
+    height: 100vh;
+    position: relative;
+}
+.devices {
+    position: relative;
+    width: 44%;
+    height: 100%;
+    display: inline-block;
+}
+.devices .pulseband {
+    position: absolute;
+    top: 55%;
+    left: -25%;
+    transform: translateY(-50%);
+    width: 75%;
+}
+.insights-copy {
+    width: 55%;
+    display: inline-block;
+    float: right;
+}
+
+/*--INSIGHTS SLIDER---*/
+.device {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    left: 20%;
+    min-height: 676px;
+    width: 359px;
+    background: url('../img/iphone-skeleton.png') no-repeat center center;
+}
+.device-content {
+    position: absolute;
+    top: 115px;
+    left: 56px;
+    width: 247px;
+    height: 445px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.device-content img {
+    width: 247px;
+    height: 445px;
+}
+.showcase-wrap {
+    position: relative;
+    padding: 100px 0;
+    min-height: 600px;
+}
+.showcase-slider ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.showcase-slider .flickity-page-dots {
+    bottom: 20px;
 }
 
 
+/*-------------ANIMATIONS-------------*/
+
+.bounceInLeft, .bounceInRight, .fadeInUp, .fadeInUpDelay, .fadeInDown, .fadeInUpD, .fadeInLeft, .fadeInRight, .bounceInDown {
+    visibility: visible
+}
+.delay-1 {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+.delay-2 {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.delay-3 {
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+.delay-4 {
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
 
 /* ==========================================================================
    Media Queries
