@@ -76,7 +76,10 @@ h1, h2, h3, h4, h5 {
     font-family: 'Oswald', sans-serif;
 }
 h1 { font-size: 9.5vh;  }
-h2 { font-size: 9vh;  }
+h2 { 
+    font-size: 7.5vh;
+    margin: 7vh 0;
+}
 h3 {
     font-size: 5vh;
     margin: 0;
@@ -105,6 +108,14 @@ li a {
     width: 70%;
     height: 100%;
     margin: 0 auto;
+}
+
+/*---------ONEPAGE OVERRIDES--------*/
+.one-page-pagination {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    top: 0;
 }
 
 /*---------JUMBOTRON----------------*/
@@ -164,7 +175,13 @@ li a {
 }
 
 /*---------MAIN-NAV----------------*/
-
+.nav-wrapper {
+  position: absolute;
+  width: 70%;
+  top: 78%;
+  left: 15%;
+  z-index: 1;
+}
 .main-nav {
     list-style: none;
     display: flex;
@@ -181,6 +198,11 @@ li a {
     width: 200px;
     height: 50px;
     line-height: 50px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 /*--------FEATURES---------------*/
@@ -203,7 +225,7 @@ li a {
 }
 .feature-item {
     width: 65%;
-    margin: 5vh 0;
+    margin: 7vh 0;
 }
 #svgtest {
     position: absolute;
@@ -293,6 +315,7 @@ li a {
     opacity: 0;
 }
 .insights-copy {
+    padding-left: 2vh;
     width: 55%;
     display: inline-block;
     float: right;
@@ -349,6 +372,73 @@ li a {
     background: white;
 }
 
+/*-----------FOOTER-----------------------*/
+.footer {
+    background: rgb(40, 70, 102) url('../img/grid.png');
+}
+.sign-up-copy {
+    display: inline-block;
+}
+.sign-up {
+    background-color: white;
+    height: 250px;
+    color: #222;
+}
+.sign-up .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*-----NEWSLETTER-----*/
+.newsletter {
+    display: inline-block;
+    position: relative;
+    border: 3px #3B75B4 solid;
+    width: 50%;
+    height: 33%;
+}
+.newsletter img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2%;
+  height: 50%;
+  width: auto;
+}
+.newsletter .email {
+  position: absolute;
+  width: 62%;
+  border: none;
+  border-bottom: 3px solid black;
+  bottom: 0;
+  color: #222;
+}
+.newsletter p {
+    color: #222;
+    position:absolute;
+    top: 2%;
+    left: 20%;
+}
+.newsletter form {
+  position: absolute;
+  left: 20%;
+  width: 75%;
+  height: 50%;
+  transform: translateY(-50%);
+  top: 50%;
+}
+.newsletter .submit {
+  border: 3px solid black;
+  color: black;
+  background-color: white;
+  margin-left: 3%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 30%;
+}
 
 /*-------------ANIMATIONS-------------*/
 

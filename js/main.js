@@ -119,8 +119,6 @@ $(document).ready(function(){
       "strokeColor": "#FAB216"
     }); 
 
-
-
   $(".main").onepage_scroll({
      sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
      easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
@@ -130,7 +128,6 @@ $(document).ready(function(){
      updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
      beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
      afterMove: function(index) {
-      console.log(index);
       if(index==2) {
         $featuresvg.lazylinepainter('paint')
       };
@@ -140,6 +137,7 @@ $(document).ready(function(){
         $("#fact-two").addClass('animated fadeInRight')
       };
       if(index==4) {
+        $("#off").addClass('animated fadeInRightShort')
         $("#on").addClass('animated fadeIn')
       }
      },   // This option accepts a callback function. The function will be called after the page moves.
@@ -150,6 +148,12 @@ $(document).ready(function(){
                                       // the browser's width is less than 600, the fallback will kick in.
      direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
   });
+
+  $(".onepage-pagination li:nth-child(2) a").append("<p>Features</p>");
+  $(".onepage-pagination li:nth-child(3) a").append("<p>App</p>");
+  $(".onepage-pagination li:nth-child(4) a").append("<p>Specs</p>");
+  $(".onepage-pagination li:nth-child(5) a").append("<p>Buy Now</p>");
+
 });
 
 

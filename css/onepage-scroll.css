@@ -31,11 +31,14 @@ body, .onepage-wrapper, html {
 .onepage-pagination {
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 0;
   z-index: 5;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
 }
 .onepage-pagination li {
   padding: 0;
@@ -48,7 +51,7 @@ body, .onepage-wrapper, html {
   display: block;
   
 }
-.onepage-pagination li a:before{
+/*.onepage-pagination li a:before{
   content: '';
   position: absolute;
   width: 4px;
@@ -57,7 +60,7 @@ body, .onepage-wrapper, html {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-}
+}*/
 
 .onepage-pagination li a.active:before{
   width: 10px;
