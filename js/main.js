@@ -139,6 +139,9 @@ $(document).ready(function(){
         $("#fact-one").addClass('animated fadeInRight')
         $("#fact-two").addClass('animated fadeInRight')
       };
+      if(index==4) {
+        $("#on").addClass('animated fadeIn')
+      }
      },   // This option accepts a callback function. The function will be called after the page moves.
      loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
      keyboard: true,                  // You can activate the keyboard controls

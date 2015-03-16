@@ -75,18 +75,19 @@ body {
 h1, h2, h3, h4, h5 {
     font-family: 'Oswald', sans-serif;
 }
-h1 { font-size: 4.5em;  }
-h2 { font-size: 4em;  }
+h1 { font-size: 9.5vh;  }
+h2 { font-size: 9vh;  }
 h3 {
-    font-size: 2.25em;
+    font-size: 5vh;
     margin: 0;
 }
 h4 { 
-    font-size: 2em;  
+    font-size: 4vh;  
     margin: 0;
     font-weight: 300;
 }
 p {
+    font-size: 2vh;
     margin: .5em 0;
 }
 
@@ -94,7 +95,7 @@ li a {
     text-decoration: none;
     color: #fff;
     font-family:'Oswald', sans-serif;
-    font-size: 1.25em;
+    font-size: 3vh;
     font-weight: 300;
 }
 
@@ -163,16 +164,12 @@ li a {
 }
 
 /*---------MAIN-NAV----------------*/
-.nav-wrapper {
-    /*background-color: rgba(255,255,255,.8);*/
-    margin-top: 50px;
-}
+
 .main-nav {
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 100px;
 }
 .main-nav li {
     margin-left: 9%;
@@ -206,14 +203,14 @@ li a {
 }
 .feature-item {
     width: 65%;
-    margin: 5% 0;
+    margin: 5vh 0;
 }
 #svgtest {
     position: absolute;
-    top:60%;
-    right: 6%;
+    top:65%;
+    right: 11%;
     transform: translateY(-50%);
-    height: 50% !important;
+    height: 60% !important;
 }
 .features svg {
     position: absolute;
@@ -237,10 +234,10 @@ li a {
 }
 
 .strengthen-item {
-    margin: 10% 0;
+    margin: 10vh 0;
 }
 .strengthen-item:nth-child(1) {
-    margin-top: 12%;
+    margin-top: 15vh;
 }
 .fact {
     display: inline-block;
@@ -286,17 +283,22 @@ li a {
     height: 100%;
     display: inline-block;
 }
-.devices .pulseband {
+.insights .pulseband {
     position: absolute;
-    top: 55%;
-    left: -25%;
-    transform: translateY(-50%);
-    width: 75%;
+    top: 27%;
+    left: 7%;
+    width: 25%;
+}
+.off {
+    opacity: 0;
 }
 .insights-copy {
     width: 55%;
     display: inline-block;
     float: right;
+}
+.insight-item {
+    margin: 4% 0;
 }
 
 /*--INSIGHTS SLIDER---*/
@@ -333,6 +335,18 @@ li a {
 }
 .showcase-slider .flickity-page-dots {
     bottom: 20px;
+}
+.flickity-page-dots .dot {
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+    -webkit-transition: background 0.3s;
+    transition: background 0.3s;
+}
+.flickity-page-dots .dot.is-selected {
+    background: white;
 }
 
 
