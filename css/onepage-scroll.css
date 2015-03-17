@@ -23,22 +23,20 @@ body, .onepage-wrapper, html {
   -webkit-transform-style: preserve-3d;
 }
 
-.onepage-wrapper .section {
+.onepage-wrapper .ops-section {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .onepage-pagination {
   position: absolute;
   right: 10px;
-  top: 0;
+  top: 50%;
   z-index: 5;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  width: 60%;
-  justify-content: space-between;
 }
 .onepage-pagination li {
   padding: 0;
@@ -46,12 +44,12 @@ body, .onepage-wrapper, html {
 }
 .onepage-pagination li a{
   padding: 10px;
-/*  width: 4px;
-  height: 4px;*/
+  width: 4px;
+  height: 4px;
   display: block;
   
 }
-/*.onepage-pagination li a:before{
+.onepage-pagination li a:before{
   content: '';
   position: absolute;
   width: 4px;
@@ -60,7 +58,7 @@ body, .onepage-wrapper, html {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-}*/
+}
 
 .onepage-pagination li a.active:before{
   width: 10px;
@@ -75,10 +73,9 @@ body, .onepage-wrapper, html {
   overflow: auto;
 }
 
-.disabled-onepage-scroll .onepage-wrapper .section {
+.disabled-onepage-scroll .onepage-wrapper .ops-section {
   position: relative !important;
   top: auto !important;
-  left: auto !important;
 }
 .disabled-onepage-scroll .onepage-wrapper {
   -webkit-transform: none !important;

@@ -119,6 +119,7 @@ li a {
     justify-content: space-between;
     top: 0;
     right:0;
+    transition: all 1s;
 }
 .onepage-pagination p {
     font-size: 2.2vh;
@@ -149,13 +150,14 @@ li a {
     color: #fff;
 }
 .nav-fill-white {
-    background-color: #fff;
+    background-color: rgba(255,255,255,1);
 }
 .nav-text-black {
     color: #222;
 }
 .hidden {
-    display: none;
+    top: -10%;
+    animation-duration: 1000;
 }
 
 /*---------JUMBOTRON----------------*/
@@ -429,6 +431,10 @@ li a {
     justify-content: space-between;
     align-items: center;
 }
+.specs svg {
+    position: absolute;
+    width: 25%;
+}
 
 /*-----NEWSLETTER-----*/
 .newsletter {
@@ -521,10 +527,10 @@ li a {
    Helper classes
    ========================================================================== */
 
-.hidden {
+/*.hidden {
     display: none !important;
     visibility: hidden;
-}
+}*/
 
 .visuallyhidden {
     border: 0;

@@ -92,10 +92,6 @@ var pathObjTwo = {
                 "path": "M29.9765625,484.422467 C29.9764142,491.029486 19.9765621,491.26546 19.9765625,484.54045 C19.9765629,477.815441 29.9767108,477.815448 29.9765625,484.422467 Z",
                 "duration": 600
             },
-            {
-                "path": "M25.0034009,489.48185 L25.0034009,654.506783",
-                "duration": 600
-            }
         ],
         "dimensions": {
             "width": 153,
@@ -109,7 +105,8 @@ $(document).ready(function(){
     {
       "svgData": pathObj,
       "strokeWidth": 1,
-      "strokeColor": "#FAB216"
+      "strokeColor": "#FAB216",
+      /*"drawsequential": false*/
     });
 
    var $svgstrengthen = $('#svgstrengthen').lazylinepainter( 
@@ -130,48 +127,38 @@ $(document).ready(function(){
      pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
      updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
      beforeMove: function(index) {
-/*      $(".onepage-pagination li").toggleClass('active-underline', function() {
-        (this).children(index).hasClass('active')
-      });*/
+      $(".onepage-pagination a.active").parent().addClass('active-underline');
+      $(".onepage-pagination a:not(.active)").parent().removeClass('active-underline');
       if(index==1) {
-        $(".onepage-pagination").addClass('hidden')
+        $(".onepage-pagination").addClass("hidden")
       }
       if(index==2) {
-        $(".onepage-pagination").removeClass('nav-fill-white')
-        $(".onepage-pagination li a p").addClass('nav-text-white')
-        $(".onepage-pagination li a p").removeClass('nav-text-black')
+        $(".onepage-pagination").removeClass("hidden")
+        $(".onepage-pagination").addClass('nav-fill-white')
       }
-      if(index==3) {
-        $(".onepage-pagination li a p").addClass('nav-text-black')
-      }
-      if(index==4) {
-        $(".onepage-pagination").removeClass('nav-fill-white')
-      }
+
      },  // This option accepts a callback function. The function will be called before the page moves.
      afterMove: function(index) {
 
       $(".onepage-pagination a.active").parent().addClass('active-underline');
       $(".onepage-pagination a:not(.active)").parent().removeClass('active-underline');
       if(index==2) {
-        $(".onepage-pagination").removeClass('hidden')
         $featuresvg.lazylinepainter('paint')
       };
       if(index==3) {
-        $(".onepage-pagination li a p").addClass('nav-text-black')
-        $(".onepage-pagination").addClass('nav-fill-white')
         $svgstrengthen.lazylinepainter('paint')
-        $("#svgtest").lazylinepainter('erase')
+        $svgstrengthen.lazylinepainter('destroy')
+        $("#svgtest").lazylinepainter('destroy')
         $("#fact-one").addClass('animated fadeInRight')
         $("#fact-two").addClass('animated fadeInRight')
       };
       if(index==4) {
-        $(".onepage-pagination li a p").removeClass('nav-text-black')
-        $(".onepage-pagination li a p").addClass('nav-text-white')
         $("#off").addClass('animated fadeInRightShort')
         $("#on").addClass('animated fadeIn')
       }
       if(index==5) {
-        $(".onepage-pagination li a p").addClass('nav-text-black')
+        /*$(".onepage-pagination li a p").addClass('nav-text-black')*/
+        /*$(".onepage-pagination").addClass('nav-fill-white')*/
       }
      },   // This option accepts a callback function. The function will be called after the page moves.
      loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
