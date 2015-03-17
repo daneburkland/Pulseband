@@ -76,18 +76,18 @@ var pathObj = {
 var pathObjTwo = {
     "svgstrengthen": {
         "strokepath": [
-            {
+/*            {
                 "path": "M24.9765625,-0.545559645 L24.9765625,328.636353",
                 "duration": 600
-            },
+            },*/
             {
                 "path": "M29.9765625,334.128117 C29.9764142,340.735136 19.9765621,340.971109 19.9765625,334.2461 C19.9765629,327.52109 29.9767108,327.521098 29.9765625,334.128117 Z",
                 "duration": 600
             },
-            {
+/*            {
                 "path": "M25.0034009,340.456022 L25.0034009,479.48185",
                 "duration": 600
-            },
+            },*/
             {
                 "path": "M29.9765625,484.422467 C29.9764142,491.029486 19.9765621,491.26546 19.9765625,484.54045 C19.9765629,477.815441 29.9767108,477.815448 29.9765625,484.422467 Z",
                 "duration": 600
@@ -143,7 +143,7 @@ $(document).ready(function(){
       $(".onepage-pagination a.active").parent().addClass('active-underline');
       $(".onepage-pagination a:not(.active)").parent().removeClass('active-underline');
       if(index==2) {
-        /*$featuresvg.lazylinepainter('paint')*/
+        $featuresvg.lazylinepainter('paint')
         $(".indicators").animate({
           "top": "42%",
           "left": "71%",
@@ -175,10 +175,11 @@ $(document).ready(function(){
   });
   
   $(".onepage-pagination").addClass('hidden')
-  $(".onepage-pagination li:nth-child(2) a").append("<p>Features</p>");
-  $(".onepage-pagination li:nth-child(3) a").append("<p>App</p>");
-  $(".onepage-pagination li:nth-child(4) a").append("<p>Specs</p>");
-  $(".onepage-pagination li:nth-child(5) a").append("<p>Buy Now</p>");
+  $(".onepage-pagination li:nth-child(2) a").append("<p>Highlights</p>");
+  $(".onepage-pagination li:nth-child(3) a").append("<p>Features</p>");
+  $(".onepage-pagination li:nth-child(4) a").append("<p>App</p>");
+  $(".onepage-pagination li:nth-child(5) a").append("<p>Specs</p>");
+  $(".onepage-pagination").append("<li><a><p>Buy Now $299</p></a></li>")
   $("a.active").parent().toggleClass('active-underline');
 
 });

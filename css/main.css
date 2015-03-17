@@ -125,12 +125,15 @@ li a {
     font-size: 2.2vh;
 }
 .onepage-pagination li {
-    height: 75%;
+    height: 65%;
     width: 6%;
 }
 .onepage-pagination li:first-child{
     margin-left: 15%;
     margin-right: 18%;
+}
+.onepage-pagination li a {
+    padding: 2%;
 }
 .onepage-pagination li:first-child a {
     background: url('../img/pulseband.svg') no-repeat center top;
@@ -140,6 +143,9 @@ li a {
     margin-right: 15%;
     border: 2px solid #FAB216;
     width:10%;
+}
+.onepage-pagination li:last-child a p {
+    color: #fab216;
 }
 .active-underline {
     border-bottom: 2px solid #FAB216;
@@ -183,6 +189,12 @@ li a {
 .slogan, .drawings {
     margin-top: 100px;
 }
+.arrow {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 /*---------SVG DRAWING---------*/
 
 .jumbotron {
@@ -200,7 +212,7 @@ li a {
 .jumbotron-device {
     width: 100%;
 }
-.drawings svg {
+.drawings .line-drawing {
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -224,7 +236,7 @@ li a {
 .nav-wrapper {
   position: absolute;
   width: 70%;
-  top: 85%;
+  top: 82%;
   left: 15%;
   z-index: 1;
 }
@@ -293,6 +305,24 @@ li a {
     width: 15%;
     height: 50%;
 }
+.ekg-1 {
+  stroke-dasharray: 100;
+  animation: dash 1.3s linear reverse infinite;
+  -webkit-animation: dash 1.3s linear reverse infinite;
+}
+.ekg-2 {
+  stroke-dasharray: 100;
+  animation: dash 1.1s linear reverse infinite;
+  -webkit-animation: dash 1.1s linear reverse infinite;
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 205;
+  }
+}
+
+
 #svgtest svg path:nth-child(3) {
     stroke: #fff;
 }
@@ -314,7 +344,7 @@ li a {
     margin: 10vh 0;
 }
 .strengthen-item:nth-child(1) {
-    margin-top: 15vh;
+    margin-top: 11vh;
 }
 .fact {
     display: inline-block;
@@ -376,7 +406,7 @@ li a {
     float: right;
 }
 .insight-item {
-    margin: 4% 0;
+    margin: 5vh 0;
 }
 
 /*--INSIGHTS SLIDER---*/
@@ -431,12 +461,17 @@ li a {
 .footer {
     background: rgb(40, 70, 102) url('../img/grid.png');
 }
+.specs {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 5vh;
+}
 .sign-up-copy {
     display: inline-block;
 }
 .sign-up {
     background-color: white;
-    height: 250px;
+    height: 200px;
     color: #222;
 }
 .sign-up .container {
@@ -446,7 +481,24 @@ li a {
 }
 .specs svg {
     position: absolute;
-    width: 25%;
+    width: 19%;
+    top: 37%;
+}
+.footer-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/*------SPECS---------*/
+.spec-class {
+    margin: 5vh 0;
+}
+.spec-block {
+    display: inline-block;
+    width: 33%;
+}
+.spec-block:last-child {
+    float: right;
 }
 
 /*-----NEWSLETTER-----*/
@@ -455,7 +507,7 @@ li a {
     position: relative;
     border: 3px #3B75B4 solid;
     width: 50%;
-    height: 33%;
+    height: 50%;
 }
 .newsletter img {
   position: absolute;
