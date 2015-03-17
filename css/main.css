@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5 {
 h1 { font-size: 9.5vh;  }
 h2 { 
     font-size: 7.5vh;
-    margin: 12vh 0 5vh 0;
+    margin: 18vh 0 0 0;
 }
 h3 {
     font-size: 5vh;
@@ -131,6 +131,10 @@ li a {
 .onepage-pagination li:first-child{
     margin-left: 15%;
     margin-right: 18%;
+}
+.onepage-pagination li:first-child a {
+    background: url('../img/pulseband.svg') no-repeat center top;
+    height:100%;
 }
 .onepage-pagination li:last-child{
     margin-right: 15%;
@@ -267,7 +271,7 @@ li a {
 }
 .feature-item {
     width: 65%;
-    margin: 7vh 0;
+    margin: 4vh 0;
 }
 #svgtest {
     position: absolute;
@@ -277,8 +281,17 @@ li a {
     height: 60% !important;
 }
 .features svg {
-    position: absolute;
-    height: 100%;
+  position: absolute;
+  width: 1%;
+  height: 1%;
+  left: 65%;
+  top: 60%;
+}
+.expanded-svg {
+    top: 42%;
+    left: 71%;
+    width: 15%;
+    height: 50%;
 }
 #svgtest svg path:nth-child(3) {
     stroke: #fff;

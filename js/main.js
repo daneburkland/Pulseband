@@ -106,7 +106,6 @@ $(document).ready(function(){
       "svgData": pathObj,
       "strokeWidth": 1,
       "strokeColor": "#FAB216",
-      /*"drawsequential": false*/
     });
 
    var $svgstrengthen = $('#svgstrengthen').lazylinepainter( 
@@ -116,8 +115,9 @@ $(document).ready(function(){
       "strokeColor": "#FAB216"
     }); 
 
-   var $navText = $(".onepage-pagination li a p");
-   var $navBar = $(".onepage-pagination");
+/*   var $navText = $(".onepage-pagination li a p");
+   var $navBar = $(".onepage-pagination");*/
+
 
   $(".main").onepage_scroll({
      sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
@@ -143,12 +143,17 @@ $(document).ready(function(){
       $(".onepage-pagination a.active").parent().addClass('active-underline');
       $(".onepage-pagination a:not(.active)").parent().removeClass('active-underline');
       if(index==2) {
-        $featuresvg.lazylinepainter('paint')
+        /*$featuresvg.lazylinepainter('paint')*/
+        $(".indicators").animate({
+          "top": "42%",
+          "left": "71%",
+          "width": "15%",
+          "height": "50%"
+        })
+
       };
       if(index==3) {
         $svgstrengthen.lazylinepainter('paint')
-        $svgstrengthen.lazylinepainter('destroy')
-        $("#svgtest").lazylinepainter('destroy')
         $("#fact-one").addClass('animated fadeInRight')
         $("#fact-two").addClass('animated fadeInRight')
       };
@@ -170,7 +175,6 @@ $(document).ready(function(){
   });
   
   $(".onepage-pagination").addClass('hidden')
-  $(".onepage-pagination li:first-child a").append("<p>Logo</p>");
   $(".onepage-pagination li:nth-child(2) a").append("<p>Features</p>");
   $(".onepage-pagination li:nth-child(3) a").append("<p>App</p>");
   $(".onepage-pagination li:nth-child(4) a").append("<p>Specs</p>");
