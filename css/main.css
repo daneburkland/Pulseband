@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5 {
 h1 { font-size: 9.5vh;  }
 h2 { 
     font-size: 7.5vh;
-    margin: 7vh 0;
+    margin: 12vh 0 5vh 0;
 }
 h3 {
     font-size: 5vh;
@@ -111,11 +111,51 @@ li a {
 }
 
 /*---------ONEPAGE OVERRIDES--------*/
-.one-page-pagination {
+.onepage-pagination {
     display: flex;
-    width: 60%;
+    align-items: center;
+    width: 100%;
+    height:10%;
     justify-content: space-between;
     top: 0;
+    right:0;
+}
+.onepage-pagination p {
+    font-size: 2.2vh;
+}
+.onepage-pagination li {
+    height: 75%;
+    width: 6%;
+}
+.onepage-pagination li:first-child{
+    margin-left: 15%;
+    margin-right: 18%;
+}
+.onepage-pagination li:last-child{
+    margin-right: 15%;
+    border: 2px solid #FAB216;
+    width:10%;
+}
+.active-underline {
+    border-bottom: 2px solid #FAB216;
+}
+
+
+/*----NAVBAR STYLES------*/
+.onepage-pagination li a {
+    color: #222;
+}
+.nav-text-white {
+    color: #fff;
+}
+.nav-fill-white {
+    background-color: #fff;
+}
+.nav-text-black {
+    color: #222;
+}
+.hidden {
+    display: none;
 }
 
 /*---------JUMBOTRON----------------*/
@@ -178,7 +218,7 @@ li a {
 .nav-wrapper {
   position: absolute;
   width: 70%;
-  top: 78%;
+  top: 85%;
   left: 15%;
   z-index: 1;
 }
@@ -193,7 +233,7 @@ li a {
 }
 .cta {
     display: inline-block;
-    border: 1px white solid;
+    border: 2px white solid;
     text-align: center;
     width: 200px;
     height: 50px;

@@ -46,8 +46,8 @@ body, .onepage-wrapper, html {
 }
 .onepage-pagination li a{
   padding: 10px;
-  width: 4px;
-  height: 4px;
+/*  width: 4px;
+  height: 4px;*/
   display: block;
   
 }

@@ -119,26 +119,59 @@ $(document).ready(function(){
       "strokeColor": "#FAB216"
     }); 
 
+   var $navText = $(".onepage-pagination li a p");
+   var $navBar = $(".onepage-pagination");
+
   $(".main").onepage_scroll({
      sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
      easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
                                       // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-     animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+     animationTime: 900,             // AnimationTime let you define how long each section takes to animate
      pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
      updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-     beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-     afterMove: function(index) {
+     beforeMove: function(index) {
+/*      $(".onepage-pagination li").toggleClass('active-underline', function() {
+        (this).children(index).hasClass('active')
+      });*/
+      if(index==1) {
+        $(".onepage-pagination").addClass('hidden')
+      }
       if(index==2) {
+        $(".onepage-pagination").removeClass('nav-fill-white')
+        $(".onepage-pagination li a p").addClass('nav-text-white')
+        $(".onepage-pagination li a p").removeClass('nav-text-black')
+      }
+      if(index==3) {
+        $(".onepage-pagination li a p").addClass('nav-text-black')
+      }
+      if(index==4) {
+        $(".onepage-pagination").removeClass('nav-fill-white')
+      }
+     },  // This option accepts a callback function. The function will be called before the page moves.
+     afterMove: function(index) {
+
+      $(".onepage-pagination a.active").parent().addClass('active-underline');
+      $(".onepage-pagination a:not(.active)").parent().removeClass('active-underline');
+      if(index==2) {
+        $(".onepage-pagination").removeClass('hidden')
         $featuresvg.lazylinepainter('paint')
       };
       if(index==3) {
-        $svgstrengthen.lazylinepainter('paint'),
+        $(".onepage-pagination li a p").addClass('nav-text-black')
+        $(".onepage-pagination").addClass('nav-fill-white')
+        $svgstrengthen.lazylinepainter('paint')
+        $("#svgtest").lazylinepainter('erase')
         $("#fact-one").addClass('animated fadeInRight')
         $("#fact-two").addClass('animated fadeInRight')
       };
       if(index==4) {
+        $(".onepage-pagination li a p").removeClass('nav-text-black')
+        $(".onepage-pagination li a p").addClass('nav-text-white')
         $("#off").addClass('animated fadeInRightShort')
         $("#on").addClass('animated fadeIn')
+      }
+      if(index==5) {
+        $(".onepage-pagination li a p").addClass('nav-text-black')
       }
      },   // This option accepts a callback function. The function will be called after the page moves.
      loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
@@ -148,11 +181,14 @@ $(document).ready(function(){
                                       // the browser's width is less than 600, the fallback will kick in.
      direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
   });
-
+  
+  $(".onepage-pagination").addClass('hidden')
+  $(".onepage-pagination li:first-child a").append("<p>Logo</p>");
   $(".onepage-pagination li:nth-child(2) a").append("<p>Features</p>");
   $(".onepage-pagination li:nth-child(3) a").append("<p>App</p>");
   $(".onepage-pagination li:nth-child(4) a").append("<p>Specs</p>");
   $(".onepage-pagination li:nth-child(5) a").append("<p>Buy Now</p>");
+  $("a.active").parent().toggleClass('active-underline');
 
 });
 
