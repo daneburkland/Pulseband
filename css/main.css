@@ -134,6 +134,7 @@ li a {
 }
 .onepage-pagination li a {
     padding: 2%;
+    width: 100%;
 }
 .onepage-pagination li:first-child a {
     background: url('../img/pulseband.svg') no-repeat center top;
@@ -307,8 +308,8 @@ li a {
 }
 .ekg-1 {
   stroke-dasharray: 100;
-  animation: dash 1.3s linear reverse infinite;
-  -webkit-animation: dash 1.3s linear reverse infinite;
+  animation: dash 0.7s linear reverse infinite;
+  -webkit-animation: dash 0.7s linear reverse infinite;
 }
 .ekg-2 {
   stroke-dasharray: 100;

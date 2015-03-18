@@ -162,16 +162,15 @@ $(document).ready(function(){
         $("#on").addClass('animated fadeIn')
       }
       if(index==5) {
-        /*$(".onepage-pagination li a p").addClass('nav-text-black')*/
-        /*$(".onepage-pagination").addClass('nav-fill-white')*/
       }
      },   // This option accepts a callback function. The function will be called after the page moves.
-     loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+     loop: false,
+     disableMouseMove: false,
      keyboard: true,                  // You can activate the keyboard controls
      responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
                                       // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
                                       // the browser's width is less than 600, the fallback will kick in.
-     direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+     direction: "vertical"              
   });
   
   $(".onepage-pagination").addClass('hidden')
@@ -183,6 +182,8 @@ $(document).ready(function(){
   $("a.active").parent().toggleClass('active-underline');
 
 });
+
+$(document).unbind('mousewheel DOMMouseScroll');
 
 
 /***************** Flickity ******************/
