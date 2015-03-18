@@ -371,10 +371,16 @@
     }
 
 
-    $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
-      event.preventDefault();
-      var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-      if(!$("body").hasClass("disabled-onepage-scroll")) init_scroll(event, delta);
+    $(document).bind('mousewheel DOMMouseScroll', function (event) {
+
+        current = $(settings.sectionContainer + ".active");
+        var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+        if (current.height() >= current.find('.page-container').height() || (current.scrollTop() === 0 && delta >= 0) || ((current[0].scrollHeight - current.scrollTop() === current.height()) && delta < 0)) {
+            event.preventDefault();
+            if (!$("body").hasClass("disabled-onepage-scroll")) {
+                init_scroll(event, delta);
+            }
+        }
     });
 
 

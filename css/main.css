@@ -386,10 +386,12 @@ li a {
     position: relative;
 }
 .devices {
-    position: relative;
-    width: 44%;
-    height: 100%;
-    display: inline-block;
+  position: absolute;
+  width: 44%;
+  top: 55%;
+  transform: translateY(-50%);
+  left: 19%;
+  display: inline-block;
 }
 .insights .pulseband {
     position: absolute;
@@ -412,10 +414,6 @@ li a {
 
 /*--INSIGHTS SLIDER---*/
 .device {
-    position: absolute;
-    top: 55%;
-    transform: translateY(-50%);
-    left: 20%;
     min-height: 676px;
     width: 359px;
     background: url('../img/iphone-skeleton.png') no-repeat center center;
