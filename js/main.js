@@ -131,10 +131,13 @@ $(document).ready(function(){
       $(".onepage-pagination a:not(.active)").parent().removeClass('active-underline');
       if(index==1) {
         $(".onepage-pagination").addClass("hidden")
+        $("#pulseband-top").addClass('pulseband-jumbotron-fade')
       }
       if(index==2) {
         $(".onepage-pagination").removeClass("hidden")
         $(".onepage-pagination").addClass('nav-fill-white')
+        $("#pulseband-top").addClass('pulseband-feature')
+        $("#pulseband-top").removeClass('pulseband-jumbotron-fade')
       }
 
      },  // This option accepts a callback function. The function will be called before the page moves.
@@ -142,11 +145,15 @@ $(document).ready(function(){
 
       $(".onepage-pagination a.active").parent().addClass('active-underline');
       $(".onepage-pagination a:not(.active)").parent().removeClass('active-underline');
+      if(index==1) {
+        $("#line-drawing-jumbotron").css('opacity', '1')
+      }
       if(index==2) {
+        $("#line-drawing-jumbotron").css('opacity', '1')
         $featuresvg.lazylinepainter('paint')
         $(".indicators").animate({
           "top": "42%",
-          "left": "71%",
+          "left": "50%",
           "width": "15%",
           "height": "50%"
         })
@@ -174,6 +181,7 @@ $(document).ready(function(){
   });
   
   $(".onepage-pagination").addClass('hidden')
+  $(".onepage-pagination li:nth-child(1) a").append("<p>Pulseband</p>");
   $(".onepage-pagination li:nth-child(2) a").append("<p>Highlights</p>");
   $(".onepage-pagination li:nth-child(3) a").append("<p>Features</p>");
   $(".onepage-pagination li:nth-child(4) a").append("<p>App</p>");

@@ -148,6 +148,11 @@ li a {
 .onepage-pagination li:last-child a p {
     color: #fab216;
 }
+.onepage-pagination li:first-child a p {
+    display: inline-block;
+    padding-left: 80px;
+    font-size: 3vh;
+}
 .active-underline {
     border-bottom: 2px solid #FAB216;
 }
@@ -181,6 +186,9 @@ li a {
     position: relative;
     margin-right: 5%;
 }
+.jumbotron .line-drawing {
+    opacity: 0;
+}
 .slogan {
     width: 50%;
     text-align: right;
@@ -206,17 +214,22 @@ li a {
 
 }
 .illustration {
+    position: fixed; /*remove this*/
     opacity: 0;
-    width:100%;
+    width:31.5%;
     height: auto;
+    top: 13%;
+    left: 15%;
+    transition: all 1s;
 }
 .jumbotron-device {
     width: 100%;
 }
-.drawings .line-drawing {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
+.line-drawing {
+    position: fixed;
+    top: 13%;
+    width: 31.5%;
+    left: 15%;
 }
 .show {
     opacity: 1;
@@ -224,13 +237,35 @@ li a {
 .hide {
     opacity: 0;
 }
-.line-drawing {
-    width: 100%;
-}
 .line-drawing,
 .illustration {
     -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
+}
+
+/*-----PULSEBAND----------*/
+.pulseband-feature {
+    left: 68%;
+    top: 38%;
+    width: 25%;
+    -webkit-transition: all 1s;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transition: -webkit-transform all 1s ease;
+    -moz-transform: rotate(-90deg);
+    -moz-transition: -webkit-transform all 1s ease;
+    transform: rotate(-90deg);
+    transition: -webkit-transform all 1s ease;
+}
+.pulseband-jumbotron-fade {
+    left: 110%;
+    opacity: 0;
+    -webkit-transition: all 1s;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition: -webkit-transform all 1s ease;
+    -moz-transform: rotate(-45deg);
+    -moz-transition: -webkit-transform all 1s ease;
+    transform: rotate(-45deg);
+    transition: -webkit-transform all 1s ease;
 }
 
 /*---------MAIN-NAV----------------*/
@@ -266,24 +301,19 @@ li a {
 
 /*--------FEATURES---------------*/
 .features {
-    background: 
-        linear-gradient(
-          rgba(33, 42, 52, 0.80), 
-          rgba(33, 42, 52, 0.80)
-        ),
-        url("../img/woman_beach_edit.jpg");
-    background-size: 100% auto;
-    height: 100vh;
-    position: relative;
+    background: rgb(40, 70, 102) url('../img/grid.png');
 }
-.features-copy {
-    width: 75%;
+.features-copy h2 {
+    text-align: center;
+    display: block;
+    width: 60%;
+    margin: 18vh auto 0 auto;
 }
 .features .container {
     position: relative;
 }
 .feature-item {
-    width: 65%;
+    width: 45%;
     margin: 4vh 0;
 }
 #svgtest {
@@ -494,6 +524,9 @@ li a {
     display: flex;
     padding: 0;
     margin: 10px 0;
+}
+.privacy li a {
+    color: #3B75B4;
 }
 .footer-nav a {
     font-size: 2.5vh;
