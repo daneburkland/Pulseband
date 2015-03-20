@@ -104,7 +104,7 @@ $(document).ready(function(){
     cellAlign: 'left',
     contain: true,
     prevNextButtons: false,
-    autoPlay: true,
+    autoPlay: 5000,
     imagesLoaded: true
   });
 

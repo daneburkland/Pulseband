@@ -262,7 +262,7 @@ li a {
 
 /*-----PULSEBAND----------*/
 .pulseband-feature {
-    left: 68%;
+    left: 70%;
     top: 38%;
     width: 25%;
     -webkit-transition: all 1s;
@@ -310,6 +310,13 @@ li a {
     justify-content: flex-end;
     align-items: center;
 }
+.main-nav a:hover {
+    color: #FAB216;
+}
+.main-nav li:last-child a:hover {
+    background-color: #fff;
+    color: #2A5481;
+}
 .main-nav li {
     margin-left: 9%;
 }
@@ -335,7 +342,7 @@ li a {
     text-align: center;
     display: block;
     width: 60%;
-    margin: 18vh auto 0 auto;
+    margin: 15vh auto 0 auto;
 }
 .features .container {
     position: relative;
@@ -452,21 +459,21 @@ li a {
 }
 .step-progress-draw {
     opacity: 1;
-  animation: dash 1s linear forwards;
-  -webkit-animation: dash 1s linear forwards;
+  animation: dash 1.5s linear forwards;
+  -webkit-animation: dash 1.5s linear forwards;
 }
 .sleep-progress-draw {
     opacity: 1;
 
-  animation: dash 1s linear forwards;
-  -webkit-animation: dash 1s linear forwards;
+  animation: dash 1.5s linear forwards;
+  -webkit-animation: dash 1.5s linear forwards;
 }
 .checkmark-draw {
     opacity: 1;
-    -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
-    animation-delay: 1s;
-    animation: dash 1s linear forwards;
-    -webkit-animation: dash 1s linear forwards;
+    -webkit-animation-delay: 1.5s; /* Chrome, Safari, Opera */
+    animation-delay: 1.5s;
+    animation: dash 1.5s linear forwards;
+    -webkit-animation: dash 1.5s linear forwards;
 }
 
 @-webkit-keyframes dash {
@@ -622,6 +629,10 @@ li a {
     height: 50px;
     border-radius: 51px;
 }
+.social a:hover {
+    background-color: #fff;
+    color: rgb(40, 70, 102);
+}
 .social li i {
     top: 50%;
     left: 50%;
@@ -630,6 +641,12 @@ li a {
 }
 .footer-nav li {
     margin-right: 5%;
+}
+.footer-nav a:hover {
+    color: #3B75B4;
+}
+.footer-nav.privacy a:hover {
+    color: #fff;
 }
 
 
@@ -693,6 +710,11 @@ li a {
   right: 0;
   height: 100%;
   width: 30%;
+}
+.newsletter .submit:hover {
+    border-color: #3B75B4;
+    color: #fff;
+    background-color: #3B75B4;
 }
 
 /*-------------ANIMATIONS-------------*/
