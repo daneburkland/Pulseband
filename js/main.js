@@ -43,6 +43,9 @@ $(document).ready(function(){
         $("#pulseband-top").removeClass('pulseband-strengthen')
         $("#pulseband-top").addClass('pulseband-jumbotron-fade')
       }
+      if(index==5) {
+        $("#pulseband-top").addClass('pulseband-jumbotron-fade')
+      }
 
      },  // This option accepts a callback function. The function will be called before the page moves.
      afterMove: function(index) {
@@ -72,6 +75,7 @@ $(document).ready(function(){
         $("#off").addClass('animated fadeInRightShort')
         $("#on").addClass('animated fadeIn')
       }
+
      },   // This option accepts a callback function. The function will be called after the page moves.
      loop: false,
      disableMouseMove: false,

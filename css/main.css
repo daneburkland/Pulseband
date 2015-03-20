@@ -159,7 +159,7 @@ li a {
 }
 .onepage-pagination li:first-child a p {
     display: inline-block;
-    padding-left: 80px;
+    padding-left: 60px;
     font-size: 3.5vh;
     line-height: 3.5vh;
 }
@@ -213,6 +213,13 @@ li a {
     bottom: 2%;
     left: 50%;
     transform: translateX(-50%);
+}
+.slogan h4 {
+    margin-bottom: 10vh;
+    font-size: 3.5vh;
+}
+.slogan h1 {
+    margin: .5em 0;
 }
 /*---------SVG DRAWING---------*/
 
@@ -312,7 +319,7 @@ li a {
     text-align: center;
     width: 200px;
     height: 50px;
-    line-height: 50px;
+    line-height: 45px;
 }
 .sticky {
   position: fixed;
