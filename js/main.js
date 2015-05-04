@@ -87,7 +87,7 @@ $(document).ready(function(){
   });
   
   $(".onepage-pagination").addClass('hidden')
-  $(".onepage-pagination li:nth-child(1) a").append("<p>Pulseband<br><span>by General Electric</span></p>");
+  $(".onepage-pagination li:nth-child(1) a").append("<p>Pulseband<br><span>by GE</span></p>");
   $(".onepage-pagination li:nth-child(2) a").append("<p>Highlights</p>");
   $(".onepage-pagination li:nth-child(3) a").append("<p>Features</p>");
   $(".onepage-pagination li:nth-child(4) a").append("<p>App</p>");

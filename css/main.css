@@ -1,5 +1,5 @@
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 html {
     color: #222;
     font-size: 1em;
@@ -114,11 +114,17 @@ li a {
 
 /*---------ONEPAGE OVERRIDES--------*/
 .onepage-pagination {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
     height:10%;
-    justify-content: space-between;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     top: 0;
     right:0;
     transition: all 1s;
@@ -141,8 +147,12 @@ li a {
 .onepage-pagination li:first-child a {
     background: url('../img/pulseband.svg') no-repeat left top;
     height:100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 190px;
 }
 .onepage-pagination span {
@@ -183,7 +193,8 @@ li a {
 }
 .hidden {
     top: -10%;
-    animation-duration: 1000;
+    -webkit-animation-duration: 1000;
+            animation-duration: 1000;
 }
 
 /*---------JUMBOTRON----------------*/
@@ -212,7 +223,8 @@ li a {
     position: absolute;
     bottom: 2%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 .slogan h4 {
     margin-bottom: 10vh;
@@ -225,6 +237,8 @@ li a {
 
 .jumbotron {
     background-image: url("../img/bg-lighter.jpg");
+    /*background: rgb(40, 70, 102) url('../img/grid.png');*/
+
     background-size: 1900px 1225px;
     background-position: left top;
     height: 100vh;
@@ -256,7 +270,6 @@ li a {
 }
 .line-drawing,
 .illustration {
-    -webkit-transition: opacity 0.5s;
     transition: opacity 0.5s;
 }
 
@@ -270,7 +283,8 @@ li a {
     -webkit-transition: -webkit-transform all 1s ease;
     -moz-transform: rotate(-90deg);
     -moz-transition: -webkit-transform all 1s ease;
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
     transition: -webkit-transform all 1s ease;
 }
 .pulseband-jumbotron-fade {
@@ -281,7 +295,8 @@ li a {
     -webkit-transition: -webkit-transform all 1s ease;
     -moz-transform: rotate(-45deg);
     -moz-transition: -webkit-transform all 1s ease;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     transition: -webkit-transform all 1s ease;
 }
 .pulseband-strengthen {
@@ -292,7 +307,8 @@ li a {
     -webkit-transition: -webkit-transform all 1s ease;
     -moz-transform: rotate(-45deg) scale(.6,.6);
     -moz-transition: -webkit-transform all 1s ease;
-    transform: rotate(-45deg) scale(.6,.6);
+    -webkit-transform: rotate(-45deg) scale(.6,.6);
+            transform: rotate(-45deg) scale(.6,.6);
     transition: -webkit-transform all 1s ease;
 }
 
@@ -306,9 +322,15 @@ li a {
 }
 .main-nav {
     list-style: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .main-nav a:hover {
     color: #FAB216;
@@ -355,7 +377,8 @@ li a {
     position: absolute;
     top:65%;
     right: 11%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     height: 60% !important;
 }
 .features svg {
@@ -493,7 +516,8 @@ li a {
   position: absolute;
   width: 44%;
   top: 55%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 19%;
   display: inline-block;
 }
@@ -556,7 +580,6 @@ li a {
     opacity: 1;
     background: transparent;
     border: 2px solid white;
-    -webkit-transition: background 0.3s;
     transition: background 0.3s;
 }
 .flickity-page-dots .dot.is-selected {
@@ -581,9 +604,15 @@ li a {
     color: #222;
 }
 .sign-up .container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .specs svg {
     position: absolute;
@@ -599,6 +628,8 @@ li a {
 }
 .footer-container ul {
     list-style: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
     margin: 10px 0;
@@ -612,10 +643,13 @@ li a {
 .social {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     right:0%;
     margin: 0;
-    justify-content: space-between;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 20%;
 }
 .social li {
@@ -637,7 +671,8 @@ li a {
     top: 50%;
     left: 50%;
     position: absolute;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 .footer-nav li {
     margin-right: 5%;
@@ -673,7 +708,8 @@ li a {
 .newsletter img {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 2%;
   height: 50%;
   width: auto;
@@ -697,7 +733,8 @@ li a {
   left: 20%;
   width: 75%;
   height: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   top: 50%;
 }
 .newsletter .submit {
@@ -748,7 +785,6 @@ li a {
 }
 
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
 
