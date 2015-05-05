@@ -62,9 +62,14 @@ html {
 
 
 /* ==========================================================================
-   Author's custom styles
+   Custom styles
    ========================================================================== */
 
+/*---------PRE-LOAD PULSEBAND----------*/
+body:after{
+    display:none;
+    content: url(../dist/img/LifebandMockup.png);
+}
 
 /*---------TYPOGRAPHY----------*/
 body {
@@ -149,7 +154,7 @@ li a {
     width: 100%;
 }
 .onepage-pagination li:first-child a {
-    background: url('../img/pulseband.svg') no-repeat left top;
+    background: url('../dist/img/pulseband.svg') no-repeat left top;
     height:100%;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -243,7 +248,9 @@ li a {
 /*---------SVG DRAWING---------*/
 
 .jumbotron {
-    background-image: url("../img/bg-lighter.jpg");
+    background-image: url("../dist/img/bg-lighter.jpg");
+    /*background: rgb(40, 70, 102) url('../img/grid.png');*/
+
     background-size: 1900px 1225px;
     background-position: left top;
     height: 100vh;
@@ -374,7 +381,7 @@ li a {
 
 /*--------FEATURES---------------*/
 .features {
-    background: rgb(40, 70, 102) url('../img/grid.png');
+    background: rgb(40, 70, 102) url('../dist/img/grid.png');
 }
 .features-copy h2 {
     text-align: center;
@@ -524,7 +531,7 @@ li a {
 
 /*-------------INSIGHTS--------------*/
 .insights {
-    background: url("../img/background.jpg");
+    background: url("../dist/img/background.jpg");
     background-size: 100% auto;
     height: 100vh;
     position: relative;
@@ -562,7 +569,7 @@ li a {
 .device {
     min-height: 676px;
     width: 359px;
-    background: url('../img/iphone-skeleton.png') no-repeat center center;
+    background: url('../dist/img/iphone-skeleton.png') no-repeat center center;
 }
 .device-content {
     position: absolute;
@@ -607,7 +614,7 @@ li a {
 
 /*-----------FOOTER-----------------------*/
 .footer {
-    background: rgb(40, 70, 102) url('../img/grid.png');
+    background: rgb(40, 70, 102) url('../dist/img/grid.png');
 }
 .specs {
     width: 70%;
