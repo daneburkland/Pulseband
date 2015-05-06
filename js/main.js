@@ -13,6 +13,12 @@ document.getElementById('step-progress').style.strokeDashoffset = -stepProgressL
 document.getElementById('sleep-progress').style.strokeDasharray = sleepProgressLength;
 document.getElementById('sleep-progress').style.strokeDashoffset = -sleepProgressLength;
 
+// For making SVG's animations responsive
+var phone = window.matchMedia( "(max-width: 768px)" );
+var tablet = window.matchMedia( "(max-width: 1024px) and (min-width: 768px)" );
+var desktop = window.matchMedia( "(min-width: 1025px)" );
+
+
 $(document).ready(function(){
   $(".main").onepage_scroll({
      sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
@@ -57,12 +63,23 @@ $(document).ready(function(){
       }
       if(index==2) {
         $("#line-drawing-jumbotron").css('opacity', '1')
-        $(".indicators").animate({
-          "top": "42%",
-          "left": "50%",
-          "width": "15%",
-          "height": "50%"
-        })
+        if(tablet.matches) {
+          $(".indicators").animate({
+            "top": "42%",
+            "left": "56%",
+            "width": "35%",
+            "height": "50%"
+          })
+        } else if (tablet.matches) {
+
+        } else {
+          $(".indicators").animate({
+            "top": "42%",
+            "left": "50%",
+            "width": "15%",
+            "height": "50%"
+          })
+        }
       };
       if(index==3) {
         $("#fact-one").addClass('animated fadeInRight')

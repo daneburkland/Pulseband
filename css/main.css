@@ -785,13 +785,146 @@ li a {
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-
-}
-
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
+
+}
+/* iPad Landscape */
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 6vh;
+    }
+    h2 {
+        font-size: 5.5vh;
+    }
+    h3 {
+        font-size: 3vh;
+    }
+    h4 {
+        font-size: 3vh;
+    }
+    p {
+        font-size: 1em;
+    }
+    .onepage-pagination p {
+        font-size: 1.5vh;
+        line-height: 3.5vh;
+    }
+    .onepage-pagination li:first-child {
+        margin-left: 5%;
+        margin-right: 15%;
+    }
+    .onepage-pagination li:first-child a p {
+      font-size: 2.5vh;
+    }
+    .onepage-pagination li:first-child a {
+      background-size: 54px;
+      background-position: center left;
+    }
+    .onepage-pagination li:last-child {
+      margin-right: 5%;
+      border: 2px solid #FAB216;
+      width: 15%;
+    }
+    .container {
+        width: 90%;
+    }
+    .nav-wrapper {
+        width: 100%;
+        left: 0;
+    }
+    .main-nav {
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+    .logo {
+        display: none;
+    }
+    .line-drawing, .illustration {
+        top: 50%;
+        left: 35%;
+    }
+    .slogan {
+        margin: 20px auto;
+        width: 70%;
+        text-align: center;
+        float: none;
+    }
+    .slogan h4 {
+        margin-bottom: 0vh;
+    }
+    .feature-item {
+        width: 55%;
+    }
+    .pulseband-feature {
+      left: 72%;
+      top: 28%;
+      width: 21%;
+    }
+    .strengthen-description {
+      width: 52%;
+      margin-left: 0;
+    }
+    .strengthen-item img {
+        display: none;
+    }
+    .strengthen-item:nth-child(1) {
+      margin-top: 11vh;
+    }
+    .strengthen svg {
+      left: 57%;
+      top: 44%;
+    }
+    .pulseband-feature.pulseband-strengthen {
+      left: 55%;
+      top: 24%;
+      width: 35%;
+    }
+    .devices {
+      top: 56%;
+      left: 2%;
+      display: inline-block;
+    }
+    .insights .pulseband {
+        display: none;
+    }
+    .insights-copy {
+        padding-left: 4vh;
+    }
+    .insight-item {
+        margin: 4vh 0;
+    }
+    .specs {
+        width: 90%;
+    }
+    .specs svg {
+        width: 23%;
+    }
+    .sign-up .container {
+        position: relative;
+        top: -15%;
+    }
+    .footer-container {
+        width: 90%;
+    }
+    .newsletter {
+        width: 75%;
+        height: 40%;
+    }
+    .social {
+        width: 30%;
+    }
+}
+
+
+/* All Mobile Sizes (devices and browsers) */
+@media only screen and (max-width: 767px) {
+
+    
 
 }
 
