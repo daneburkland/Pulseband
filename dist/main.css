@@ -847,6 +847,7 @@ li a {
     }
     .onepage-pagination li:first-child a p {
       font-size: 2.5vh;
+      line-height: 2.5vh;
     }
     .onepage-pagination li:first-child a {
       background-size: 54px;
@@ -924,6 +925,9 @@ li a {
     }
     .insights .pulseband {
         display: none;
+    }
+    .spec-block {
+        width: 35%;
     }
     .insights-copy {
         padding-left: 4vh;

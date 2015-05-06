@@ -67,7 +67,7 @@ $(document).ready(function(){
           $(".indicators").animate({
             "top": "42%",
             "left": "56%",
-            "width": "35%",
+            "width": "32%",
             "height": "50%"
           })
         } else if (tablet.matches) {
