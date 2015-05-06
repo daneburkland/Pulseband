@@ -849,9 +849,6 @@ li a {
       font-size: 2.5vh;
       line-height: 2.5vh;
     }
-    .onepage-pagination li:last-child a p {
-      font-size: .75em;
-    }
     .onepage-pagination li:first-child a {
       background-size: 54px;
       background-position: center left;
@@ -1021,6 +1018,9 @@ li a {
     .onepage-pagination li:last-child {
         display: list-item;
         width: 30%;
+    }
+    .onepage-pagination li:last-child a p {
+      font-size: .75em;
     }
     .features-copy h2 {
         width: 100%;
