@@ -945,11 +945,14 @@ li a {
         position: relative;
         top: -15%;
     }
+    .sign-up-copy {
+        width: 35%;
+    }
     .footer-container {
         width: 90%;
     }
     .newsletter {
-        width: 75%;
+        width: 60%;
         height: 40%;
     }
     .social {
