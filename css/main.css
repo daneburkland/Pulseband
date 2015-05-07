@@ -177,6 +177,7 @@ li a {
     padding-left: 60px;
     font-size: 3.5vh;
     line-height: 3.5vh;
+    margin: 0;
 }
 .active-underline {
     border-bottom: 2px solid #FAB216;
@@ -602,6 +603,7 @@ li a {
 }
 .sign-up-copy {
     display: inline-block;
+    width: 50%;
 }
 .sign-up {
     background-color: white;
@@ -612,12 +614,8 @@ li a {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 .specs svg {
     position: absolute;
